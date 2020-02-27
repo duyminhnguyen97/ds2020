@@ -11,6 +11,8 @@ USTH ICT 2020 Distributed Systems
 Group Info
 =======================
 
-* Name 1 (ID1)
-* Name 2 (ID2)
-
+* Nguyen Duy Minh (USTHBS1-001)
+* Dao Binh Minh (USTHBI6-094)
+* Vo Minh Duc (USTHBI7-042)
+* Dang Nhat Minh (USTHBI7-107)
+* Nguyen Trung Hieu (USTHBI8-067)
