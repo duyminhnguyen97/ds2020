@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\title{Distributed System Practical Work 2}
+\author{RPC File Transfer}
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\pagebreak
+
+\section{Protocol Design}
+This RPC Files Transfer system is currently only 1 way, we haven't found a way to implement 2 ways transfer, but it's a first step. In this system, only the Client send Files and the Server receives them. The Client can send however many files he wants.\\ \\
+We use gRPC protocol by Google. The first step is to produce a .proto file and then use the protoc compiler to get the "stub". Then using files produced by the proto compiler, we implement the gRPC files transfer, this is how our directory looks:\\ \\
+\includegraphics[scale=0.8]{dir.png}
+
+\section{Codes}
+\subsection{Server}
+\includegraphics[scale=0.8]{server_code.png}
+
+\subsection{Client}
+\includegraphics[scale=0.8]{client_code.png}
+
+\subsection{Result on CMD}
+Client side\\
+\includegraphics[scale=1]{client_result.png}\\
+Server side\\
+\includegraphics[scale=1]{server_result.png}\\
+
+
+\textbf{In conclusion:}\\
+As discussed above, this is only a 1 way files transfer, maybe in the future we will come back to this and implement a 2 ways files transfer.
+
+\end{document}
