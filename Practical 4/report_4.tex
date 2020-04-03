@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\title{Distributed System Practical Work 3}
+\author{Map Reduce Words Count}
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\pagebreak
+
+\section{Protocol Design}
+This Map Reduce Words Count Practical Work is written in C++, we decide to make up our own Map Reduce Implementation from C++ because idk...\\
+
+\section{Codes}
+\subsection{Map}
+How this section works is that, we detect each word by a " " (a space bar) and it's stored in a pair of string and int.\\
+This is the code snippet from the mapping section of the practical work: \\
+\includegraphics[scale=0.8]{map_code.png}
+
+\subsection{Reduce}
+This reduce section is mainly working with vector in C++, we have 2 vectors, 1 is the first vector and the other is the result. We first look for similar words in the first vector and push it in the result vector (look for all the same words in the sentence to push those into the result bar, this is to sort the Map). \\
+Then we check for the same words in the result vector, increment the integer value and deletes the other similar words. \\
+This is the code snippet from the reduce section of the practical work: \\
+\includegraphics[scale=0.8]{reduce_code.png}
+
+\subsection{Result}
+The sentence can be changed in the codes, we haven't tested if it works with Uppercase and Lowercase yet, but 1 think to note is that at the end of the sentence, it needs a " " space bar or the program won't recognize the final word.\\
+\includegraphics[scale=0.8]{result.png}
+
+\textbf{In conclusion:}\\
+The program is running smoothly and it's working as intended. The program is to our satisfaction!!
+
+\end{document}
