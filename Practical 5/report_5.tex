@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\title{Distributed System Practical Work 5}
+\author{Longest Path}
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\pagebreak
+
+\section{Protocol Design}
+This Longest Paths Practical Work is written in C++, using our previously made Mapper and Reducer.
+
+\section{Codes}
+\subsection{Map}
+How this section works is that, we detect each path by a "BACKSLASH" (a back slash but in C++, it's required to type BACKSLASH twice, doesn't work in here either so i have to write BACKSLASH) and it's stored in a pair of string and int.\\
+This is the code snippet from the mapping section of the practical work: \\
+\includegraphics[scale=0.8]{map_code.png}
+
+\subsection{Reduce}
+This reduce section is mainly working with vector in C++, we have 2 vectors, 1 is the first vector and the other is the result. In the previous mapping section, every time a path is "mapped", the first vector also got pushed with a "SKIP" string. We look for each word separated by a back slash until we find a "SKIP" string and we push that full sentence into the result vector. \\
+Then finally, in the result vector, find the sentence with the largest Int. \\
+This is the code snippet from the reduce section of the practical work: \\
+\includegraphics[scale=0.8]{reduce_code.png}
+
+\subsection{Result}
+The sentence can be changed in the codes, we haven't tested if it works with Uppercase and Lowercase yet, but 1 think to note is that at the end of the sentence, it needs a "BACKSLASH" black slash or the program won't recognize the final word.\\
+\includegraphics[scale=0.8]{result.png}
+
+\textbf{In conclusion:}\\
+The program is running smoothly and it's working as intended. The program is to our satisfaction!!
+
+\end{document}
