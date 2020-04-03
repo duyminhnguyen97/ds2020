@@ -1,0 +1,30 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\title{Distributed System Practical Work 3}
+\author{MPI File Transfer}
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\pagebreak
+
+\section{Protocol Design}
+This MPI Files Transfer system is currently only 1 way, however to implement a 2-ways file transfer seems to be quite the same as 1-way, just a bit more time to code, however we do believe this will be sufficient and if it's really necessarily, we could implement the 2-ways.\\ \\
+In this practical work, we use the Microsoft MPI and C++ to implement the MPI files transfer protocol. The reason we use this is because it's simple to set up the environment and C++ is our strong suit (i think). The way our system works at the moment is that the "server" can send any files he wants to the "client", and the client can only receive files. Because this practical work is done from 1 computer, it's not exactly Server and Client, but rather processor 0 and processor 1. Here being the processor 0 is the server, and the processor 1 is the client, if needed, there can be more clients as there are 2 more (i think?) available processors to act as clients. As mentioned from above, it's currently only 1-way Server to Client but it's quite easy to implement the other way around too.\\
+
+\section{Codes}
+\subsection{Server}
+\includegraphics[scale=0.8]{server_code.png}
+
+\subsection{Client}
+\includegraphics[scale=0.8]{client_code.png}
+
+\subsection{Result on CMD}
+Running this line of code on the CMD: mpiexec MPITest.exe \\
+\includegraphics[scale=0.8]{result.png}
+
+\textbf{In conclusion:}\\
+We are decently happy enough with the result, obviously it can be improved a lot more, however we do think it's okay enough for the practical work.
+
+\end{document}
